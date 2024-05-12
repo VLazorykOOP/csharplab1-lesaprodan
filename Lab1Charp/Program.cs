@@ -124,3 +124,33 @@ namespace ConsoleApp
         }
     }
 }
+//task 5
+using System;
+
+namespace ConsoleApp 
+{
+    internal class Program 
+    {
+        private static void Main() 
+        {
+            // Введення двох дійсних чисел користувачем
+            Console.WriteLine("Введіть перше дійсне число:");
+            double a = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введіть друге дійсне число:");
+            double b = Convert.ToDouble(Console.ReadLine());
+
+            // Виклик функції для обчислення добутку та виведення результату
+            double product = Multiply(a, b);
+            Console.WriteLine($"Добуток чисел {a} та {b} дорівнює {product}");
+
+            Console.ReadKey();
+        }
+
+        // Функція для обчислення добутку двох дійсних чисел
+        private static double Multiply(double x, double y) 
+        {
+            return x * y; // Повертаємо добуток чисел
+        }
+    }
+}
