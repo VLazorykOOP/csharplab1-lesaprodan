@@ -154,3 +154,53 @@ namespace ConsoleApp
         }
     }
 }
+// task 6
+using System;
+
+namespace ConsoleApp 
+{
+    internal class lab16
+    {
+        private static void Main() 
+        {
+            int n, m;
+
+            Console.WriteLine("Введіть ціле число n:");
+            if (!int.TryParse(Console.ReadLine(), out n)) 
+            {
+                Console.WriteLine("Помилка: Введено не ціле число для n.");
+                return;
+            }
+
+            Console.WriteLine("Введіть ціле число m:");
+            if (!int.TryParse(Console.ReadLine(), out m)) 
+            {
+                Console.WriteLine("Помилка: Введено не ціле число для m.");
+                return;
+            }
+
+            // Перевірка на ділення на нуль
+            if (m + Math.Pow(m, 2) + 1 == 0) 
+            {
+                Console.WriteLine("Помилка: Вираз містить ділення на нуль.");
+                return;
+            }
+
+            // Обчислення виразу
+            double result = CalculateExpression(n, m);
+
+            // Виведення результату
+            Console.WriteLine($"Результат виразу дорівнює {result}");
+
+            Console.ReadKey();
+        }
+
+        // Функція для обчислення виразу
+        private static double CalculateExpression(int n, int m) 
+        {
+            // Обчислення виразу за формулою
+            double expression = (3.0 / (n + Math.Pow(m, 2) + 1) + 1) * (m - n);
+            return expression;
+        }
+    }
+}
