@@ -43,3 +43,39 @@ class lab12
         }
     }
 }
+//task 3
+namespace ConsoleApp 
+{
+    internal class lab13
+    {
+    
+        private static void Main() 
+        {
+    
+            Console.WriteLine("Введіть x");
+            var x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введіть y");
+            var y = Convert.ToInt32(Console.ReadLine());
+
+            // Перевірка, чи точка знаходиться всередині області
+            if (Math.Abs(x) <= y && x * x + y * y <= 15 * 15) 
+            {
+                // Перевірка, чи точка знаходиться на межі області
+                if (Math.Abs(x) == y || x * x + y * y == 15 * 15) 
+                {
+                    Console.WriteLine("На межі");
+                }
+                else 
+                {
+                    Console.WriteLine("Так");
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Ні");
+            }
+    
+            Console.ReadKey();
+        }
+    }
+}
