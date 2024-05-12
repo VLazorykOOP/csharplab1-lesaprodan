@@ -1,16 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
+using System;
 
- static void task1()
+class lab11
 {
-    Console.WriteLine("Task1 !");
-    Console.Write("s= ");
-    string? str = Console.ReadLine();
-    float s = 0; 
-    if (str != null) s = float.Parse(str);
-    double p = 4 * Math.Sqrt(s);
-    Console.WriteLine("p=" + p);
+static void Main(string[] args)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        
+        Console.WriteLine("Введіть довжину сторони трикутника (a):");
+        double a = Convert.ToDouble(Console.ReadLine());
 
+         Обчислення радіуса вписаного кола в рівносторонній трикутник
+        double radius = (a / (2 * Math.Sqrt(3)));
+
+        // Виведення результату
+        Console.WriteLine($"Радіус вписаного кола: {radius}");
+    }
 }
-Console.WriteLine("Lab 1 !");
-task1();
-// continue ...
